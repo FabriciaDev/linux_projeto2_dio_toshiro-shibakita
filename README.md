@@ -10,6 +10,6 @@ Foi decidido também quebrar a aplicação até então "monolítica", ou seja um
 Neste projeto foi utilizado o Docker Swarm, que é cluster (conjunto de nós) de container de docker.
 Para esse projeto foi criado 3 maquinas virtuais no aws. Em uma delas a máquina foi aberta através do PuTTY e rodada uma aplicação para a criação de um banco dados, o arquivo "banco.sql".
 
-Depois foi criada uma aplicação para teste em php dentro de "/var/lib/volumes/data/_data#".
+Depois foi criada uma aplicação para teste em php dentro de "/var/lib/volumes/app/_data#" de nome "index.php". No vídeo o arquivo foi criado com o nano.
 
 
