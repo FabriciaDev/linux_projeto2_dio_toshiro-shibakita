@@ -56,5 +56,5 @@ Rodar com o comando: "docker build -t proxy-app ."
 
 REpetir o teste de extresse.
 
-### Devido a restrições no plano gratuito o projeto não pode ser replicado totalmente. De forma qu foi feita a trascrição total para consultas futuras.
+### Devido a restrições no plano gratuito da AWS o projeto não pode ser replicado totalmente. De forma qu foi feita a trascrição total para consultas futuras.
 
