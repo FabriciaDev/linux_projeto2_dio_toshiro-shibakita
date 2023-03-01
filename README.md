@@ -14,4 +14,10 @@ Depois foi criada uma aplicação para teste em php dentro de "/var/lib/volumes/
 
 Foi instruido pequenos detalhes no código para modificar conforme o sistema.
 
+Foi executado o Docker Run com o comando: run --name web-server -dt -p 80:80 --mount type-volume.src-app.dst=/app/ webdevops/php-apache:alpine-php7
+
+Obs . --name é o nome do web server quw roda na porta 80:80
+
+A fim de verificar se apenas um servidor é suficiente, foi feito teste de estresse. No exemplo da foi utilizado o site https://loader.io/
+
 
