@@ -8,4 +8,8 @@ o projeto é usado um supermercado fictício em que uma aplicação no caixa con
 Foi decidido também quebrar a aplicação até então "monolítica", ou seja uma coisa só, em microserviços, ou seja dividir a aplicação em vários pequenos pedaços a fim de ter melhor performace. Um detalhe interessante a respeito de microserviços é que os serviços não precisam estarescritos sempre na mesma linguagem.
 
 Neste projeto foi utilizado o Docker Swarm, que é cluster (conjunto de nós) de container de docker.
-Para esse projeto foi criado 3 maquinas virtuais no aws.
+Para esse projeto foi criado 3 maquinas virtuais no aws. Em uma delas a máquina foi aberta através do PuTTY e rodada uma aplicação para a criação de um banco dados, o arquivo "banco.sql".
+
+Depois foi criada uma aplicação para teste em php dentro de "/var/lib/volumes/data/_data#".
+
+
