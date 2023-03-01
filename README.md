@@ -14,7 +14,7 @@ Depois foi criada uma aplicação para teste em php dentro de "/var/lib/volumes/
 
 Foi instruido pequenos detalhes no código para modificar conforme o sistema.
 
-Foi executado o Docker Run com o comando: run --name web-server -dt -p 80:80 --mount type-volume.src-app.dst=/app/ webdevops/php-apache:alpine-php7
+Foi executado o Docker Run com o comando: run --name web-server -dt -p 80:80 --mount type-volume.src=app.dst=/app/ webdevops/php-apache:alpine-php7
 
 Obs . --name é o nome do web server quw roda na porta 80:80
 
@@ -24,4 +24,29 @@ O servidor é interrompido com o comando: "docker ps"
 
 Cria-se então um Docker Swarn como o comando: "docker swarn init"
 
+Abre outro servidor qie está na aws,a fim de informar ao servidor que ele faz parte do cluster. Em root digita-se o comando dado pelo servidor após a criação do Docker Swarn.
+
+Repete-se com o terceiro servidor.
+
+De volta ao servidor em que se estava configurando inicialmente, dá-se o comando "docker node ls" para verificar se os servidores forzm configurados corretamente.
+
+Cria-se o serviço com o comando: " docker service create --name web-server ==replicas 10 -dt -p 80:80 --mount type-volume.src=app.dst=/app/ webdevops/php-apache:alpine-php7"
+
+Para verificar o serviço digitar o comando: "docker service ps web-server" lembrando que webservice foi o nome dado ao serviço.
+
+Editar o arquivo /etc/exports atravéz do comando:  "nano /etc/exports"
+
+Foi,  então, adicionado o caminho o caminho seguido da permisão. No vídeo o professor deu permissão a todos por questão de tempo. Caso contrário ele teria que adicionar o IP de cada nó concetado. A linha adicionada ao arquivo no vídeo foi: "/var/lib/docker/volumes/app/data *(rw.sync.subtree_check)"
+
+Exportar com o comando:"exportfs -ar"
+
+Utiliza-se o comando "showmount -e" para informar quais pastas estão sendo compartilhadas.
+
+Na maquina dois, monta-se a pasta no servidor 1 com o comando: "mount -o v3 172.31.0.127:/var/lib/docker/volumes/app/_data /var/docker/volumes/app/_data"
+
+Obs. o comando deve ser adaptado
+
+Com um "ls" verifica-se que o artquivo index.php agora também está na maquina 2. Repetir na máquina 3.
+
+Na máquina 1 foi criada uma proxy. Para isso foi criado o diretório /proxy. E, na sequência, o arquivo nginx.conf com o comando "nano nginx.conf"
 
