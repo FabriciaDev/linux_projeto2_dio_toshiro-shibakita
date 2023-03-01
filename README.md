@@ -48,5 +48,13 @@ Obs. o comando deve ser adaptado
 
 Com um "ls" verifica-se que o artquivo index.php agora também está na maquina 2. Repetir na máquina 3.
 
-Na máquina 1 foi criada uma proxy. Para isso foi criado o diretório /proxy. E, na sequência, o arquivo nginx.conf com o comando "nano nginx.conf"
+Na máquina 1 foi criada uma proxy. Para isso foi criado o diretório /proxy. E, na sequência, o arquivo nginx.conf com o comando "nano nginx.conf". Neste arquivo são definidos quais são as máquinas que fazem parte.
+
+A fim de validar esse arquivo de configuração é criado o arquivo dockerfile com o comando "nano dockerfile".
+
+Rodar com o comando: "docker build -t proxy-app ."
+
+REpetir o teste de extresse.
+
+### Devido a restrições no plano gratuito o projeto não pode ser replicado totalmente. De forma qu foi feita a trascrição total para consultas futuras.
 
