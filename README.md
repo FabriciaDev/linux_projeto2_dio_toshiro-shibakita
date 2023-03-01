@@ -20,4 +20,8 @@ Obs . --name é o nome do web server quw roda na porta 80:80
 
 A fim de verificar se apenas um servidor é suficiente, foi feito teste de estresse. No exemplo da foi utilizado o site https://loader.io/
 
+O servidor é interrompido com o comando: "docker ps"
+
+Cria-se então um Docker Swarn como o comando: "docker swarn init"
+
 
